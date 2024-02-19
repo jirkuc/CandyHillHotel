@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candy Hills Hotel - Kucera</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Home start -->
+    <section id="home" class="position-relative">
+      <img
+        src="https://images.unsplash.com/photo-1702311178078-1edf877d3afe?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Background"
+        class="c-background-img"
+      />
+
+      <div
+        id="title"
+        class="container container-fluid c-home justify-content-center text-center"
+      >
+        <h1 class="c-script">Candy Hill</h1>
+        <p class="display-6">Hotel</p>
+      </div>
+
+      <!-- Booking form start -->
+      <section
+        id="booking-form"
+        class="container bg-dark bg-opacity-50 text-white"
+      >
+        <div class="row justify-content-center text-center">
+          <h2>Quick booking</h2>
+          <div class="col-md-8 col-xl-6">
+            <form action="#">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Johny"
+                  aria-describedby="Name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="surname" class="form-label">Surname:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="surname"
+                  name="surname"
+                  placeholder="English"
+                  aria-describedby="Surname"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  aria-describedby="emailHelp"
+                  placeholder="ab@cde.fg"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone number:</label>
+
+                <input
+                  type="Text"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  aria-describedby="phone"
+                  placeholder="+1234567890"
+                />
+                <div id="phoneHelp" class="form-text text-white">
+                  (incl. international dial-up preference)
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 mb-3">
+                  <label for="guest-no" class="form-label"
+                    >Number of guests:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="guest-no"
+                    name="guest-no"
+                    value="1"
+                    aria-describedby="guest-no"
+                  />
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <div class="form-label">Room type:</div>
+                  <select class="form-select" aria-label="suite-size">
+                    <option value="economy">Economy</option>
+                    <option value="standard">Standard</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="superior">Superior</option>
+                  </select>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="date-from" class="form-label"
+                    >Arrival date:</label
+                  >
+                  <input
+                    id="date-from"
+                    type="date"
+                    class="form-control"
+                    name="date-from"
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label for="date-to" class="form-label"
+                    >Departure date:</label
+                  >
+                  <input
+                    id="date-to"
+                    type="date"
+                    class="form-control"
+                    name="date-to"
+                  />
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-sm">
+                  <button
+                    type="submit"
+                    class="btn btn-primary px-5 py-2 w-100 my-2"
+                  >
+                    Book now!
+                  </button>
+                </div>
+                <div class="col-sm">
+                  <button
+                    type="button"
+                    class="btn btn-primary px-5 py-2 w-100 my-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#yt-presentation"
+                  >
+                    Virtual tour
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Modal added -->
+          <!-- Button trigger modal -->
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="yt-presentation"
+            tabindex="-1"
+            aria-labelledby="yt-presentation"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title fs-5" id="yt-presentationHeading">
+                    Explore the site
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <iframe
+                    width="400"
+                    height="300"
+                    src="https://www.youtube.com/embed/EZa6ndgz5jM?si=ZIUADspa5XErHZJM"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking form end -->
+      </section>
+
+      <!-- Home end -->
+    </section>
+
+    <header class="sticky-top w-100 mt-3">
+      <nav
+        id="navigation"
+        class="navbar navbar-expand-sm navbar-dark bg-primary"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand fs-3" href="#">Candy Hills</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#history">History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Header and navigation end -->
+      </nav>
+    </header>
+
+    <!-- History start -->
+    <section id="history" class="bg-dark text-white">
+      <div class="container-fluid">
+        <h2 class="c-script">History</h2>
+        <div class="row align-items-start">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, ipsam eaque quidem sequi aperiam quod illum quia
+                  voluptatum corporis neque blanditiis quibusdam ea nisi impedit
+                  consectetur, expedita eum perspiciatis, dicta quae non nobis
+                  praesentium officia?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, ipsam eaque quidem sequi aperiam quod illum quia
+                  voluptatum corporis neque blanditiis quibusdam ea nisi impedit
+                  consectetur, expedita eum perspiciatis, dicta quae non nobis
+                  praesentium officia?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, ipsam eaque quidem sequi aperiam quod illum quia
+                  voluptatum corporis neque blanditiis quibusdam ea nisi impedit
+                  consectetur, expedita eum perspiciatis, dicta quae non nobis
+                  praesentium officia?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, ipsam eaque quidem sequi aperiam quod illum quia
+                  voluptatum corporis neque blanditiis quibusdam ea nisi impedit
+                  consectetur, expedita eum perspiciatis, dicta quae non nobis
+                  praesentium officia?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, ipsam eaque quidem sequi aperiam quod illum quia
+                  voluptatum corporis neque blanditiis quibusdam ea nisi impedit
+                  consectetur, expedita eum perspiciatis, dicta quae non nobis
+                  praesentium officia?
+                </p>
+              </div>
+              <div class="col-sm">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, ipsam eaque quidem sequi aperiam quod illum quia
+                  voluptatum corporis neque blanditiis quibusdam ea nisi impedit
+                  consectetur, expedita eum perspiciatis, dicta quae non nobis
+                  praesentium officia?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, ipsam eaque quidem sequi aperiam quod illum quia
+                  voluptatum corporis neque blanditiis quibusdam ea nisi impedit
+                  consectetur, expedita eum perspiciatis, dicta quae non nobis
+                  praesentium officia?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, ipsam eaque quidem sequi aperiam quod illum quia
+                  voluptatum corporis neque blanditiis quibusdam ea nisi impedit
+                  consectetur, expedita eum perspiciatis, dicta quae non nobis
+                  praesentium officia?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, ipsam eaque quidem sequi aperiam quod illum quia
+                  voluptatum corporis neque blanditiis quibusdam ea nisi impedit
+                  consectetur, expedita eum perspiciatis, dicta quae non nobis
+                  praesentium officia?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, ipsam eaque quidem sequi aperiam quod illum quia
+                  voluptatum corporis neque blanditiis quibusdam ea nisi impedit
+                  consectetur, expedita eum perspiciatis, dicta quae non nobis
+                  praesentium officia?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-none d-sm-block">
+            <img
+              src="https://images.unsplash.com/photo-1706561038071-6db568890c12?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="In the mountains"
+              width="100%"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- history end -->
+    </section>
+
+    <!-- Pricing start -->
+    <section id="pricing" class="bg-dark text-white">
+      <div class="container-fluid">
+        <h2 class="c-script">Prices</h2>
+        <div class="row mx-auto">
+          <div class="col-sm-6 col-lg-3 my-2">
+            <div class="card c-card">
+              <div class="c-card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1517912181842-e5a9d4701a4e?q=80&w=2131&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top object-fit-cover c-crsl-img"
+                  alt="Economy"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Economy</h5>
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Person</th>
+                      <th>Night</th>
+                      <th>Week</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>35&euro;</td>
+                      <td>210&euro;</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>40&euro;</td>
+                      <td>240&euro;</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>45&euro;</td>
+                      <td>270&euro;</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button class="btn btn-primary">Book now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 my-2">
+            <div class="card c-card">
+              <div class="c-card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top object-fit-cover c-crsl-img"
+                  alt="Standard"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Standard</h5>
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Person</th>
+                      <th>Night</th>
+                      <th>Week</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>35&euro;</td>
+                      <td>210&euro;</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>40&euro;</td>
+                      <td>240&euro;</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>45&euro;</td>
+                      <td>270&euro;</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button class="btn btn-primary">Book now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 my-2">
+            <div class="card c-card">
+              <div class="c-card-img">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1671269705768-cad27668134c?q=80&w=1921&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top object-fit-cover c-crsl-img"
+                  alt="Deluxe"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Deluxe</h5>
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Person</th>
+                      <th>Night</th>
+                      <th>Week</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>35&euro;</td>
+                      <td>210&euro;</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>40&euro;</td>
+                      <td>240&euro;</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>45&euro;</td>
+                      <td>270&euro;</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button class="btn btn-primary">Book now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 my-2">
+            <div class="card c-card">
+              <div class="c-card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top object-fit-cover c-crsl-img"
+                  alt="Superior"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Superior</h5>
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Person</th>
+                      <th>Night</th>
+                      <th>Week</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>35&euro;</td>
+                      <td>210&euro;</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>40&euro;</td>
+                      <td>240&euro;</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>45&euro;</td>
+                      <td>270&euro;</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button class="btn btn-primary">Book now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- pricing end -->
+    </section>
+
+    <!-- Gallery start -->
+    <section id="gallery" class="bg-dark text-white">
+      <h2 class="c-script">Gallery</h2>
+      <div
+        id="galleryCaptions"
+        class="carousel slide carousel-fade container-fluid pb-3"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#galleryCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Economy"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#galleryCaptions"
+            data-bs-slide-to="1"
+            aria-label="Standard"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#galleryCaptions"
+            data-bs-slide-to="2"
+            aria-label="Deluxe"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#galleryCaptions"
+            data-bs-slide-to="3"
+            aria-label="Superior"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active c-crsl">
+            <img
+              src="https://images.unsplash.com/photo-1517912181842-e5a9d4701a4e?q=80&w=2131&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="d-block object-fit-cover w-100 h-100"
+              alt="Economy"
+            />
+            <div class="carousel-caption bg-opacity-50 bg-dark">
+              <h5>Economy</h5>
+            </div>
+          </div>
+          <div class="carousel-item c-crsl">
+            <img
+              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="d-block object-fit-cover w-100 h-100"
+              alt="Standard"
+            />
+            <div class="carousel-caption bg-opacity-50 bg-dark">
+              <h5>Standard</h5>
+            </div>
+          </div>
+          <div class="carousel-item c-crsl">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1671269705768-cad27668134c?q=80&w=1921&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="d-block object-fit-cover w-100 h-100"
+              alt="Deluxe"
+            />
+            <div class="carousel-caption bg-opacity-50 bg-dark">
+              <h5>Deluxe</h5>
+            </div>
+          </div>
+          <div class="carousel-item c-crsl">
+            <img
+              src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="d-block object-fit-cover w-100 h-100"
+              alt="..."
+            />
+            <div class="carousel-caption bg-opacity-50 bg-dark">
+              <h5>Superior</h5>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#galleryCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#galleryCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Gallery end -->
+    </section>
+
+    <!-- Contact start -->
+    <section id="contact" class="content-items-center bg-dark text-white">
+      <div class="container-fluid">
+        <h2 class="c-script">Contact Us</h2>
+        <div class="row text-center">
+          <div class="col-md w-100">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9097.679305918096!2d12.794597753872964!3d47.31910040203543!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47771cd8c3664411%3A0x2fef56b986899b00!2sHotel%20Pension%20Villa%20Klothilde!5e0!3m2!1scs!2scz!4v1707138437319!5m2!1scs!2scz"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-100"
+            ></iframe>
+          </div>
+          <div class="col-md fs-1">
+            <p>
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </p>
+            <p>
+              <a href="https://www.twitter.com/" target="_blank"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </p>
+          </div>
+          <div class="col-md">
+            <p><i class="fa-solid fa-phone"></i><br />+43123456789</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i><br />info@mail-box-test.at
+            </p>
+            <p>
+              <i class="fa-solid fa-house"></i><br />
+              Ambergerstraße 2 <br />
+              5700 Zell am See <br />
+              Austria
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts added -->
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        //navbar
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const collapseNavbar = function () {
+          // Ověříme, zda je navigační menu v rozbalovacím režimu
+          if (window.innerWidth < 992) {
+            const bsCollapse = new bootstrap.Collapse(
+              navbarToggler.nextElementSibling,
+              {
+                toggle: false,
+              }
+            );
+            bsCollapse.hide();
+          }
+        };
+
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", collapseNavbar);
+        });
+
+        //Vysvětlení:
+        // nextElementSibling je JavaScriptová vlastnost, která vrátí element, který je bezprostředně
+        // následující sourozencem daného elementu v DOM stromu. V tomto případě hledáte element,
+        // který je hned za navbarToggler v HTML struktuře. V kontextu Bootstrap navigace, tento element
+        // obvykle reprezentuje rozbalovací část navigační lišty. Pak vytváříte instanci
+        // Bootstrap Collapse komponenty pro tento element, kterou pak můžete programově skrýt.
+
+        //modal
+        document.querySelectorAll(".modal").forEach(function (modal) {
+          modal.addEventListener("hide.bs.modal", function () {
+            const memory = this.innerHTML;
+            this.innerHTML = memory;
+          });
+        });
+      });
+      //Vysvětlení:
+      // document.querySelectorAll('.modal').forEach(function(modal) {...}):
+      // Vybere všechny elementy s třídou modal a pro každý z nich provede funkci uvedenou v těle forEach.
+      // modal.addEventListener('hide.bs.modal', function() {...}): Přidává posluchače událostí pro každé modální okno,
+      // který reaguje na událost hide.bs.modal - událost specifickou pro Bootstrap, která nastane, když se modální okno začíná skrývat.
+      // var memory = this.innerHTML; this.innerHTML = memory;: Ukládá aktuální HTML obsah modálního okna do proměnné memory a
+      // poté ho okamžitě nastavuje zpět. Toto zachovává aktuální stav modálního okna, i když je skryto.
+    </script>
+
+    <!-- End of scripts section -->
+  </body>
+</html>
